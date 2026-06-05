@@ -12,7 +12,7 @@
 /* Components */
 @import "components/cards.css";
 @import "components/navigation.css";
-@import "components/tech-marquee.css";
+@import "components/tech-list.css";
 
 /* Content */
 @import "content/markdown.css";

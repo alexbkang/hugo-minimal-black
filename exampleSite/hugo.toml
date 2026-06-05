@@ -50,7 +50,7 @@ theme = "minimal-black"
 
   # Home Page Configuration
   [params.home]
-    sections = ["hero", "tech-marquee", "projects", "posts"]
+    sections = ["hero", "tech-list", "projects", "posts"]
     showFeaturedProjects = true
     showLatestPosts = true
     featuredProjectsLimit = 3
@@ -59,7 +59,7 @@ theme = "minimal-black"
     projectsSubtitle = ""
     blogTitle = "Latest Writing"
     blogSubtitle = ""
-    techMarqueeLabel = "Experienced In"
+    techListLabel = "Experienced In"
 
     # Technology Stack Display
     [[params.home.tech]]

@@ -15,7 +15,7 @@ assets/css/
 │   ├── cards.css              # Card variants (home, project, post, CTA)
 │   ├── navigation.css         # Header, footer, nav links
 │   ├── search.css             # Search overlay & results
-│   └── tech-marquee.css       # Technology carousel
+│   └── tech-list.css          # Technology list
 ├── content/
 │   ├── markdown.css           # Typography, blockquotes, lists, code
 │   └── toc.css                # Table of contents sidebar
@@ -38,7 +38,7 @@ Reusable UI components that appear across multiple pages:
 - **cards.css**: All card variants including home cards, project/post cards, CTA cards, and badges
 - **navigation.css**: Page layouts, header, footer, navigation links, and theme toggle
 - **search.css**: Search modal overlay, search results, empty states, and keyboard hints
-- **tech-marquee.css**: Animated technology/skills carousel component
+- **tech-list.css**: Static technology/skills list component
 
 ### Content
 Styles specific to content rendering:

@@ -2,17 +2,16 @@
 {{- $hero := .Site.Params.hero -}}
 {{- $techMain := $home.tech -}}
 {{- $techReverse := $home.techReverse -}}
+{{- $label := or $home.techListLabel $home.techMarqueeLabel $hero.techMarqueeLabel "What I Work With" -}}
 
 {{ with $techMain }}
   <div class="space-y-5 animate-fade-up">
     <div class="space-y-2">
-      <h3 class="heading-section text-base">
-        {{ default "What I Work With" $hero.techMarqueeLabel }}
-      </h3>
+      <h3 class="heading-section text-base">{{ $label }}</h3>
 
-      <div class="tech-strip" role="list" aria-label="Technologies">
+      <div class="tech-list" role="list" aria-label="Technologies">
         {{ range . }}
-          <div class="tech-strip-item" role="listitem">
+          <div class="tech-list-item" role="listitem">
             {{ with .icon }}
               <i class="{{ . }} tech-icon"></i>
             {{ end }}
@@ -22,7 +21,7 @@
 
         {{ with $techReverse }}
           {{ range . }}
-            <div class="tech-strip-item" role="listitem">
+            <div class="tech-list-item" role="listitem">
               {{ with .icon }}
                 <i class="{{ . }} tech-icon"></i>
               {{ end }}

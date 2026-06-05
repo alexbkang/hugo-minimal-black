@@ -48,7 +48,7 @@ assets/css/
 │   ├── cards.css
 │   ├── navigation.css
 │   ├── search.css
-│   └── tech-marquee.css
+│   └── tech-list.css
 ├── content/          # Content-specific styles
 │   ├── markdown.css
 │   └── toc.css
