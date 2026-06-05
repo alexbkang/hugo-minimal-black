@@ -1,7 +1,7 @@
 {{ define "main" }}
   <section class="layout-page">
     <div class="page-int section-stack section-stack--home">
-      {{ $default := slice "hero" "now" "tech-marquee" "projects" "posts" }}
+      {{ $default := slice "hero" "tech-marquee" "projects" "posts" }}
       {{ $sections := .Site.Params.home.sections | default $default }}
 
       {{ range $sections }}

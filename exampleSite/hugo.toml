@@ -50,8 +50,7 @@ theme = "minimal-black"
 
   # Home Page Configuration
   [params.home]
-    sections = ["hero", "now", "tech-marquee", "projects", "posts"]
-    showNowSection = true
+    sections = ["hero", "tech-marquee", "projects", "posts"]
     showFeaturedProjects = true
     showLatestPosts = true
     featuredProjectsLimit = 3
@@ -202,14 +201,6 @@ theme = "minimal-black"
     focus = "Currently focused on Hugo themes & developer experience."
     available = true
     availableLabel = "Available for work"
-
-    nowLabel = "Quick Facts"
-    nowIntro = "Right now I'm mainly:"
-    now = [
-      "Building minimal Hugo themes",
-      "Exploring dark-mode design patterns",
-      "Writing about web performance"
-    ]
 
     [params.hero.primary]
       label = "View Projects"
