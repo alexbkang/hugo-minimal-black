@@ -150,46 +150,6 @@ theme = "minimal-black"
       label = "pfSense"
       icon = "devicon-pfsense-plain"       
 
-  # About Page Alternative Layout Configuration - Optional
-  [params.about.alt]
-    # Stats displayed in the profile card sidebar
-    [[params.about.alt.stats]]
-      value = "5+"
-      label = "Years Coding"
-
-    [[params.about.alt.stats]]
-      value = "20+"
-      label = "Projects"
-
-    [[params.about.alt.stats]]
-      value = "∞"
-      label = "Hours Spent"
-
-    # Skills/Tech Stack badges with icons
-    [[params.about.alt.skills]]
-      label = "JavaScript"
-      icon = "devicon-javascript-plain"
-
-    [[params.about.alt.skills]]
-      label = "Python"
-      icon = "devicon-python-plain"
-
-    [[params.about.alt.skills]]
-      label = "React"
-      icon = "devicon-react-original"
-
-    [[params.about.alt.skills]]
-      label = "Docker"
-      icon = "devicon-docker-plain"
-
-    [[params.about.alt.skills]]
-      label = "PostgreSQL"
-      icon = "devicon-postgresql-plain"
-
-    [[params.about.alt.skills]]
-      label = "AWS"
-      icon = "devicon-amazonwebservices-plain"
-
   # Hero Section Configuration
   [params.hero]
     badge = "Software Engineer"
@@ -273,15 +233,6 @@ theme = "minimal-black"
     identifier = "about"
     [menu.main.params]
       icon = "fa-regular fa-user"
-
-  [[menu.main]]
-    name = "About Alt"
-    pageRef = "about-alternative"
-    url = "/about-alternative/"
-    weight = 2
-    identifier = "about-alternative"
-    [menu.main.params]
-      icon = "fa-solid fa-user"
 
   [[menu.main]]
     name = "Projects"
