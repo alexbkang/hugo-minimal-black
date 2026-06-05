@@ -293,15 +293,12 @@
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.2s ease-out;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .about-social-link:hover {
-    transform: translateY(-2px);
     background: color-mix(in srgb, var(--color-surface) 80%, transparent);
     border-color: var(--color-accent);
     color: var(--color-accent);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
 
   .about-social-link i {

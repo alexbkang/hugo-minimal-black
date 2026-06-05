@@ -1050,12 +1050,6 @@
     color: var(--color-accent);
     background: color-mix(in srgb, var(--color-accent) 12%, transparent);
     border-color: var(--color-accent);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(168, 85, 247, 0.2);
-  }
-
-  .mb-action-btn:active {
-    transform: translateY(0);
   }
 
   .mb-action-btn i {
@@ -1145,13 +1139,10 @@
     cursor: pointer;
     transition: all 0.15s ease-out;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .mb-expand-trigger:hover {
     background: color-mix(in srgb, var(--color-accent) 28%, transparent);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(168, 85, 247, 0.35);
     border-color: color-mix(in srgb, var(--color-accent) 90%, white);
   }
 

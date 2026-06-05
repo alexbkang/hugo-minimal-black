@@ -86,52 +86,11 @@
     });
   }
 
-  /* ---------- Dock ---------- */
-
-  function initDock() {
-    var dock = document.querySelector("[data-dock]");
-    if (!dock) return;
-
-    var toggle = dock.querySelector("[data-dock-toggle]");
-    var backTop = dock.querySelector('[data-dock-action="top"]');
-    var backBtn = dock.querySelector('[data-dock-action="back"]');
-    var open = false;
-
-    function setOpen(next) {
-      open = next;
-      dock.classList.toggle("dock--open", open);
-    }
-
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        setOpen(!open);
-      });
-    }
-
-    if (backTop) {
-      backTop.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    }
-
-    if (backBtn) {
-      backBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.history.back();
-      });
-    }
-  }
-
   /* ---------- Init ---------- */
 
   document.addEventListener("DOMContentLoaded", function () {
     initThemeFromDOM();
     initThemeToggle();
     initMobileNav();
-    initDock();
   });
 })();
