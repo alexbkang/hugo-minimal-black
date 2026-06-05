@@ -21,10 +21,8 @@
           {{ end }}
         </header>
 
-        <div class="card card-pad">
-          <div class="markdown-body">
-            {{ .Content }}
-          </div>
+        <div class="markdown-body">
+          {{ .Content }}
         </div>
       </article>
 
@@ -126,6 +124,8 @@
                     tocLinks.forEach(link => link.classList.remove('active'));
                     // Add active to current link
                     tocLink.classList.add('active');
+                    // Keep the active item visible inside the TOC panel
+                    tocLink.scrollIntoView({ block: 'nearest' });
                   }
                 }
               }
@@ -144,6 +144,7 @@
           // Highlight first item by default
           if (tocLinks.length > 0) {
             tocLinks[0].classList.add('active');
+            tocLinks[0].scrollIntoView({ block: 'nearest' });
             activeHeading = tocLinks[0].getAttribute('href').substring(1);
           }
         })();

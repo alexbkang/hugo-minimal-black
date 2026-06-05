@@ -2466,8 +2466,7 @@ html[data-theme="light"] .markdown-body pre {
 
 /* Heading anchors */
 
-.markdown-body .md-heading-anchor,
-.markdown-body .md-heading-anchor:hover {
+.markdown-body .md-heading-anchor, .markdown-body .md-heading-anchor:hover {
   color: inherit;
   text-decoration: none;
   border-bottom: none;
@@ -3413,6 +3412,11 @@ html[data-theme="light"] .mb-codeblock-content {
 .article-main {
   min-width: 0;
   overflow-x: hidden;
+}
+
+.article-main > .markdown-body {
+  max-width: none;
+  margin-inline: 0;
 }
 
 .article-toc {
