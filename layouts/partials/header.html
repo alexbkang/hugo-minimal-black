@@ -10,7 +10,7 @@
         <!-- Brand: logo or monogram, always links to root -->
         <a href="{{ "/" | relURL }}" class="flex items-center gap-2">
           {{ with .Site.Params.logo }}
-            <div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-surface">
+            <div class="flex h-8 w-8 items-center justify-center overflow-hidden bg-surface">
               <img
                 src="{{ . | relURL }}"
                 alt="{{ $brand }}"
@@ -50,7 +50,7 @@
           <!-- Mobile menu button -->
           <button
             type="button"
-            class="ml-1 inline-flex items-center justify-center rounded-full border border-border bg-bg p-2 text-muted shadow-sm hover:text-accent md:hidden"
+            class="ml-1 inline-flex items-center justify-center bg-transparent p-2 text-muted hover:text-accent md:hidden"
             aria-label="Toggle navigation"
             data-mobile-nav-toggle
           >
@@ -70,7 +70,7 @@
   <!-- Mobile nav (uses same menu config) -->
   <div class="mx-auto mt-2 max-w-7xl px-4 sm:px-6 md:hidden">
     <nav
-      class="hidden rounded-2xl border border-border bg-surface px-4 py-3 text-sm text-muted shadow-md"
+      class="hidden bg-transparent px-4 py-3 text-sm text-muted"
       data-mobile-nav
     >
       {{ range .Site.Menus.main }}
