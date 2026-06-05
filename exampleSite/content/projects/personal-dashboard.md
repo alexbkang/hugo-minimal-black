@@ -1,12 +1,12 @@
 +++
-title = "Minimal Black Hugo Theme"
-date = "2025-01-15"
-description = "A minimal, dark-mode first Hugo theme"
-github = "https://gitlab.com/jimchr12/hugo-minimal-black"
-demo = "https://minimal-black-demo.netlify.app"
-tags = ["hugo", "theme", "web-development", "open-source"]
-categories = ["web"]
-pinned = true
+title = "Personal Dashboard"
+date = "2025-03-25"
+description = "A compact personal analytics and notes dashboard for daily workflows"
+github = "https://example.com/personal-dashboard"
+demo = "https://example.com/personal-dashboard/demo"
+tags = ["dashboard", "productivity", "ui", "prototype"]
+categories = ["tools"]
+pinned = false
 +++
 
 A comprehensive Hugo theme designed for developers, designers, and everyone in general who value simplicity, performance, and beautiful dare I say dark mode design (maybe?).
@@ -261,7 +261,7 @@ content/
 ```yaml
 +++
 title = "Post Title"
-date = "2025-01-15"
+date = "2025-03-25"
 tags = ["hugo", "web-dev"]
 categories = ["tutorials"]
 draft = false
@@ -275,7 +275,7 @@ title = "Project Name"
 description = "Brief description"
 github = "https://github.com/..." # Optional
 demo = "https://demo.com" # Optional
-featured = true
+featured = false
 +++
 ```
 

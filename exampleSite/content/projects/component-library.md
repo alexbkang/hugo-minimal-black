@@ -1,11 +1,11 @@
 +++
-title = "Minimal Black Hugo Theme"
-date = "2025-01-15"
-description = "A minimal, dark-mode first Hugo theme"
-github = "https://gitlab.com/jimchr12/hugo-minimal-black"
-demo = "https://minimal-black-demo.netlify.app"
-tags = ["hugo", "theme", "web-development", "open-source"]
-categories = ["web"]
+title = "Minimal Component Library"
+date = "2025-02-18"
+description = "A reusable component system for content-heavy personal sites"
+github = "https://example.com/component-library"
+demo = "https://example.com/component-library/demo"
+tags = ["components", "design-system", "css", "open-source"]
+categories = ["design-system"]
 pinned = true
 +++
 
@@ -261,7 +261,7 @@ content/
 ```yaml
 +++
 title = "Post Title"
-date = "2025-01-15"
+date = "2025-02-18"
 tags = ["hugo", "web-dev"]
 categories = ["tutorials"]
 draft = false
@@ -275,7 +275,7 @@ title = "Project Name"
 description = "Brief description"
 github = "https://github.com/..." # Optional
 demo = "https://demo.com" # Optional
-featured = true
+featured = false
 +++
 ```
 

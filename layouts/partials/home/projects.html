@@ -14,11 +14,11 @@
 
     {{ $limit := cond (gt (int $home.featuredProjectsLimit) 0) (int $home.featuredProjectsLimit) 3 }}
     {{ $allProjects := where .Site.RegularPages "Section" "projects" }}
-    {{ $featured := where $allProjects "Params.featured" true }}
-    {{ if not (gt (len $featured) 0) }}
-      {{ $featured = $allProjects }}
+    {{ $pinned := where $allProjects "Params.pinned" true }}
+    {{ if not (gt (len $pinned) 0) }}
+      {{ $pinned = $allProjects }}
     {{ end }}
-    {{ $list := first $limit $featured }}
+    {{ $list := first $limit $pinned }}
 
     <div class="grid gap-4 md:grid-cols-2">
       {{ range $list }}

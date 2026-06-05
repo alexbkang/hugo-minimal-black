@@ -2,7 +2,7 @@
 {{- $p := .Page -}}
 
 {{- $icon := $p.Params.icon | default "fa-solid fa-folder-tree" -}}
-{{- $badge := cond ($p.Params.featured) "Featured" "" -}}
+{{- $isPinned := $p.Params.pinned -}}
 
 {{- $repo := $p.Params.repo -}}
 {{- $repoIcon := $p.Params.repoIcon | default "fa-brands fa-github" -}}
@@ -29,8 +29,10 @@
           <h3 class="truncate text-sm font-semibold tracking-tight group-hover:text-accent">
             {{ $p.Title }}
           </h3>
-          {{ with $badge }}
-            <span class="card-badge">{{ . }}</span>
+          {{ if $isPinned }}
+            <span class="card-badge" aria-label="Pinned" title="Pinned">
+              <i class="fa-solid fa-thumbtack text-[0.65rem]"></i>
+            </span>
           {{ end }}
         </div>
 
