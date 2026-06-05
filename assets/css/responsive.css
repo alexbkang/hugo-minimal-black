@@ -49,12 +49,6 @@
       font-size: 0.9rem;
     }
 
-    /* Heading anchors - adjust for smaller screens */
-    .markdown-body .md-heading-anchor::before {
-      left: -1rem;
-      font-size: 0.85em;
-    }
-
     /* Blockquotes */
     .markdown-body blockquote,
     .markdown-body .md-blockquote {

@@ -1,26 +1,22 @@
 {{ define "main" }}
-  <section class="layout-page">
-    <article class="about-page">
-      <!-- Hero Section -->
-      <header class="about-hero">
-        <div class="about-hero-content">
-          {{ with .Site.Params.hero.avatar }}
-            <div class="about-avatar">
-              <img src="{{ . | relURL }}" alt="{{ $.Site.Params.brand }}" />
-            </div>
-          {{ end }}
+  <section class="layout-page section-stack">
+    <article class="about-page section-stack">
+      <header class="about-header space-y-2">
+        {{ with .Site.Params.hero.avatar }}
+          <div class="about-avatar">
+            <img src="{{ . | relURL }}" alt="{{ $.Site.Params.brand }}" />
+          </div>
+        {{ end }}
 
-          <h1 class="about-title">{{ .Title }}</h1>
+        <h1 class="heading-page text-2xl sm:text-3xl">{{ .Title }}</h1>
 
-          {{ with .Params.subtitle }}
-            <p class="about-subtitle">{{ . }}</p>
-          {{ end }}
-        </div>
+        {{ with .Params.subtitle }}
+          <p class="max-w-xl text-sm text-muted">{{ . }}</p>
+        {{ end }}
       </header>
 
-      <!-- Main Content -->
       <div class="about-content">
-        <div class="card card-pad markdown-body">
+        <div class="markdown-body">
           {{ $content := .Content }}
           {{ $content = replace $content "<hr>" "|||SPLIT|||" }}
           {{ $content = replace $content "<hr />" "|||SPLIT|||" }}
@@ -28,13 +24,10 @@
           {{ $parts := split $content "|||SPLIT|||" }}
 
           {{ if eq (len $parts) 1 }}
-            <!-- No timeline, render normally -->
             {{ .Content }}
           {{ else }}
-            <!-- Render intro section (everything before first hr) -->
             {{ index $parts 0 | safeHTML }}
 
-            <!-- Render timeline -->
             <div class="timeline">
               {{ range after 1 $parts }}
                 {{ $trimmed := trim . " \n\t" }}
@@ -52,26 +45,6 @@
         </div>
       </div>
 
-      <!-- Social Links Footer -->
-      {{ with .Site.Params.social }}
-        <div class="about-social">
-          <h3 class="about-social-title">Let's Connect</h3>
-          <div class="about-social-links">
-            {{ range . }}
-              <a
-                href="{{ .url }}"
-                class="about-social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="{{ .label }}"
-              >
-                <i class="{{ .icon }}"></i>
-                <span>{{ .label }}</span>
-              </a>
-            {{ end }}
-          </div>
-        </div>
-      {{ end }}
     </article>
   </section>
 {{ end }}
