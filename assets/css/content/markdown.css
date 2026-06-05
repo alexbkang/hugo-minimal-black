@@ -1294,21 +1294,6 @@
     }
   }
 
-  @keyframes tech-marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .tech-strip-track {
-      animation: none;
-    }
-  }
-
   /* gallery */
   .markdown-body .gallery-container {
     margin: 2rem 0;

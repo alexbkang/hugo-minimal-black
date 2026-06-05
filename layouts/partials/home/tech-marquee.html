@@ -2,7 +2,6 @@
 {{- $hero := .Site.Params.hero -}}
 {{- $techMain := $home.tech -}}
 {{- $techReverse := $home.techReverse -}}
-{{- $variant := $home.techVariant | default "wide" -}}
 
 {{ with $techMain }}
   <div class="space-y-5 animate-fade-up">
@@ -11,47 +10,25 @@
         {{ default "What I Work With" $hero.techMarqueeLabel }}
       </h3>
 
-      <div class="tech-strip {{ if eq $variant "compact" }}tech-strip--compact{{ else }}tech-strip--wide{{ end }}">
-        <!-- primary row (always rendered) -->
-        <div class="tech-strip-track tech-strip-track--primary">
-          {{ range . }}
-            <div class="tech-strip-item">
-              {{ with .icon }}
-                <i class="{{ . }} tech-icon"></i>
-              {{ end }}
-              <span class="font-medium">{{ .label }}</span>
-            </div>
-          {{ end }}
-          {{ range . }}
-            <div class="tech-strip-item" aria-hidden="true">
-              {{ with .icon }}
-                <i class="{{ . }} tech-icon"></i>
-              {{ end }}
-              <span class="font-medium">{{ .label }}</span>
-            </div>
-          {{ end }}
-        </div>
-
-        <!-- secondary row, reverse (only if techReverse is defined) -->
-        {{ with $techReverse }}
-          <div class="tech-strip-track tech-strip-track--secondary">
-            {{ range . }}
-              <div class="tech-strip-item">
-                {{ with .icon }}
-                  <i class="{{ . }} tech-icon"></i>
-                {{ end }}
-                <span class="font-medium">{{ .label }}</span>
-              </div>
+      <div class="tech-strip" role="list" aria-label="Technologies">
+        {{ range . }}
+          <div class="tech-strip-item" role="listitem">
+            {{ with .icon }}
+              <i class="{{ . }} tech-icon"></i>
             {{ end }}
-            {{ range . }}
-              <div class="tech-strip-item" aria-hidden="true">
-                {{ with .icon }}
-                  <i class="{{ . }} tech-icon"></i>
-                {{ end }}
-                <span class="font-medium">{{ .label }}</span>
-              </div>
-            {{ end }}
+            <span class="font-medium">{{ .label }}</span>
           </div>
+        {{ end }}
+
+        {{ with $techReverse }}
+          {{ range . }}
+            <div class="tech-strip-item" role="listitem">
+              {{ with .icon }}
+                <i class="{{ . }} tech-icon"></i>
+              {{ end }}
+              <span class="font-medium">{{ .label }}</span>
+            </div>
+          {{ end }}
         {{ end }}
       </div>
     </div>

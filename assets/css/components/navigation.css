@@ -47,7 +47,7 @@
   }
 
   .card-hover {
-    @apply transition-transform transition-shadow duration-150 ease-out;
+    @apply transition-shadow duration-150 ease-out;
   }
 
   .card-hover:hover {
